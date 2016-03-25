@@ -56,7 +56,7 @@ Player.prototype.handleInput = function(key) {
   // which will ensure the game runs at the same speed for
   // all computers.
   var distX = 100;
-  var distY = 85;
+  var distY = 82.5;
 
   if (key) {
     switch (key) {
@@ -67,11 +67,12 @@ Player.prototype.handleInput = function(key) {
         if (this.x + distX <=400 ) {this.x += distX;};
         break;
       case "up":
-        if (this.y - distY >=0 ) {this.y -= distY;};
+      console.log(this.y - distY );
+        if (this.y - distY >=-50 ) {this.y -= distY;};
         
         break;
       case "down":
-        if (this.y + distY <=375 ) {this.y += distY;};
+        if (this.y + distY <=400 ) {this.y += distY;};
         break;
     }
   }
